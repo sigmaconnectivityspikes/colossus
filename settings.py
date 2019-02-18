@@ -8,8 +8,8 @@ Y_RES = 360
 FPS = 15
 MAX_DISTANCE = 800  # cm
 
-PROTOTXT_PATH = "MobileNetSSD_deploy.prototxt.txt"
-MODEL_PATH = "MobileNetSSD_deploy.caffemodel"
+PROTOTXT_PATH = "model/MobileNetSSD_deploy.prototxt.txt"
+MODEL_PATH = "model/MobileNetSSD_deploy.caffemodel"
 CLASS_NAMES = ("background", "aeroplane", "bicycle", "bird", "boat", "bottle", "bus", "car", "cat",
                "chair", "cow", "diningtable", "dog", "horse", "motorbike", "person", "pottedplant",
                "sheep", "sofa", "train", "tvmonitor")

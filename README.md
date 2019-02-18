@@ -11,8 +11,6 @@ Tested on Ubuntu system
 The model is a Caffe version of the original TensorFlow implementation
  by Howard et al. and was trained by chuanqi305:
   https://github.com/chuanqi305/MobileNet-SSD.
-  Download caffemodel and prototxt files and place them in model
-   directory (see paths in settings.py file).
 
 ## Run demo
 Run python estimate_height.py
