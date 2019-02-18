@@ -137,7 +137,7 @@ def main():
     # Read neural network model
     net = cv2.dnn.readNetFromCaffe(prototxt_path, model_path)
     colors = np.random.uniform(0, 255, size=(len(class_names), 3))
-    height_buffer = CircularBuffer(size=15)
+    height_buffer = CircularBuffer(size=1)
     pipeline, rs_config = configure_stream(x_res, y_res, fps)
     '''
     # Get OEM device information, not used because of dynamic calibration
@@ -182,11 +182,11 @@ def main():
             # Put information on image
             for (label, idx, confidence, x_min, x_max, y_min, y_max, distance,
                  height) in objects_parameters:
-                label_text = "{} Height: {:.2f} Distance: {:.1f}".format(label, height, distance)
+                label_text = "H {:.1f} Dist: {:.1f}".format(height, distance)
                 color = colors[idx]
-                add_bounding_box(color_image, x_min, y_min, x_max, y_max, color)
+               # add_bounding_box(color_image, x_min, y_min, x_max, y_max, color)
                 add_text(color_image, x_min, y_min, color, label_text)
-                add_bounding_box(depth_image, x_min, y_min, x_max, y_max, color)
+               # add_bounding_box(depth_image, x_min, y_min, x_max, y_max, color)
                 add_text(depth_image, x_min, y_min, color, label_text)
 
             # Display RGB and depth frames
